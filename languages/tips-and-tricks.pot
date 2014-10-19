@@ -1,0 +1,286 @@
+# Copyright (C) 2014 Sami Keijonen
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tips and tricks 1.0.0\n"
+"Report-Msgid-Bugs-To: https://foxland.fi/contact/\n"
+"POT-Creation-Date: 2014-10-19 17:47:59+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: WP-Translations (http://wp-translations.org/)\n"
+"Language-Team: WP-Translations "
+"(http://www.transifex.com/projects/p/wp-translations/)\n"
+"X-Generator: grunt-wp-i18n 0.4.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-KeywordsList: "
+"__;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_"
+"x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Textdomain-Support: yes\n"
+
+#: admin/admin-functions.php:34
+msgid "Show Tips"
+msgstr ""
+
+#: admin/admin-functions.php:59 admin/admin-functions.php:169
+msgid "Close"
+msgstr ""
+
+#: admin/admin-functions.php:72 includes/post-types.php:90
+#: includes/post-types.php:92 includes/post-types.php:93
+#: includes/post-types.php:94 includes/post-types.php:105
+msgid "Tips"
+msgstr ""
+
+#: admin/admin-functions.php:114
+msgid "Table of Contents"
+msgstr ""
+
+#: admin/admin-functions.php:155
+msgid "Helpful Tips"
+msgstr ""
+
+#: admin/admin-functions.php:156
+msgid "How to read tips?"
+msgstr ""
+
+#: admin/admin-functions.php:157
+msgid "To read your help tip, simply click the link in table of contents."
+msgstr ""
+
+#: admin/admin-functions.php:158
+msgid "How to filter tips?"
+msgstr ""
+
+#: admin/admin-functions.php:159
+msgid "I am working on it. Right now the category links do not work."
+msgstr ""
+
+#: includes/post-types.php:91
+msgid "Tip"
+msgstr ""
+
+#: includes/post-types.php:95
+msgid "Add Tip"
+msgstr ""
+
+#: includes/post-types.php:96
+msgid "Add New Tip"
+msgstr ""
+
+#: includes/post-types.php:97
+msgid "Edit Tip"
+msgstr ""
+
+#: includes/post-types.php:98
+msgid "New Tip"
+msgstr ""
+
+#: includes/post-types.php:99
+msgid "View Tip"
+msgstr ""
+
+#: includes/post-types.php:100
+msgid "Search Tips"
+msgstr ""
+
+#: includes/post-types.php:101
+msgid "No tips found"
+msgstr ""
+
+#: includes/post-types.php:102
+msgid "No tips found in trash"
+msgstr ""
+
+#: includes/post-types.php:126
+msgid "Enter tip name"
+msgstr ""
+
+#: includes/post-types.php:142
+msgid "Tip updated. <a href=\"%s\">View tip</a>"
+msgstr ""
+
+#: includes/post-types.php:145
+msgid "Tip updated."
+msgstr ""
+
+#: includes/post-types.php:146
+msgid "Tip restored to revision from %s"
+msgstr ""
+
+#: includes/post-types.php:147
+msgid "Tip published. <a href=\"%s\">View tip</a>"
+msgstr ""
+
+#: includes/post-types.php:148
+msgid "Tip saved."
+msgstr ""
+
+#: includes/post-types.php:149
+msgid "Tip submitted. <a target=\"_blank\" href=\"%s\">Preview tip</a>"
+msgstr ""
+
+#: includes/post-types.php:150
+msgid ""
+"Tip scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" "
+"href=\"%2$s\">Preview tip</a>"
+msgstr ""
+
+#: includes/post-types.php:150
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: includes/post-types.php:151
+msgid "Tip draft updated. <a target=\"_blank\" href=\"%s\">Preview tip</a>"
+msgstr ""
+
+#: includes/taxonomies.php:54
+msgid "Tips and tricks Categories"
+msgstr ""
+
+#: includes/taxonomies.php:55
+msgid "Tips and tricks Category"
+msgstr ""
+
+#: includes/taxonomies.php:56
+msgid "Categories"
+msgstr ""
+
+#: includes/taxonomies.php:57
+msgid "Category"
+msgstr ""
+
+#: includes/taxonomies.php:58
+msgid "Search Categories"
+msgstr ""
+
+#: includes/taxonomies.php:59
+msgid "Popular Categories"
+msgstr ""
+
+#: includes/taxonomies.php:60
+msgid "All Categories"
+msgstr ""
+
+#: includes/taxonomies.php:61
+msgid "Edit Category"
+msgstr ""
+
+#: includes/taxonomies.php:62
+msgid "View Category"
+msgstr ""
+
+#: includes/taxonomies.php:63
+msgid "Update Category"
+msgstr ""
+
+#: includes/taxonomies.php:64
+msgid "Add New Category"
+msgstr ""
+
+#: includes/taxonomies.php:65
+msgid "New Category Name"
+msgstr ""
+
+#: includes/taxonomies.php:66
+msgid "Parent Category"
+msgstr ""
+
+#: includes/taxonomies.php:67
+msgid "Parent Category:"
+msgstr ""
+
+#: includes/taxonomies.php:108
+msgid "Tips and tricks Tags"
+msgstr ""
+
+#: includes/taxonomies.php:109
+msgid "Tips and tricks Tag"
+msgstr ""
+
+#: includes/taxonomies.php:110
+msgid "Tags"
+msgstr ""
+
+#: includes/taxonomies.php:111
+msgid "Tag"
+msgstr ""
+
+#: includes/taxonomies.php:112
+msgid "Search Tags"
+msgstr ""
+
+#: includes/taxonomies.php:113
+msgid "Popular Tags"
+msgstr ""
+
+#: includes/taxonomies.php:114
+msgid "All Tags"
+msgstr ""
+
+#: includes/taxonomies.php:115
+msgid "Edit Tag"
+msgstr ""
+
+#: includes/taxonomies.php:116
+msgid "View Tag"
+msgstr ""
+
+#: includes/taxonomies.php:117
+msgid "Update Tag"
+msgstr ""
+
+#: includes/taxonomies.php:118
+msgid "Add New Tag"
+msgstr ""
+
+#: includes/taxonomies.php:119
+msgid "New Tag Name"
+msgstr ""
+
+#: includes/taxonomies.php:120
+msgid "Separate tags with commas"
+msgstr ""
+
+#: includes/taxonomies.php:121
+msgid "Add or remove tags"
+msgstr ""
+
+#: includes/taxonomies.php:122
+msgid "Choose from the most used tags"
+msgstr ""
+
+#: includes/taxonomies.php:123
+msgid "No tags found"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Tips and tricks"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://foxland.fi/downloads/tips-and-tricks"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Helpful tips and tricks for editors."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Sami Keijonen"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://foxland.fi"
+msgstr ""
+
+#: admin/admin-functions.php:135
+msgctxt "Arrow up"
+msgid "&uarr;"
+msgstr ""

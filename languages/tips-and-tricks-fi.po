@@ -1,0 +1,289 @@
+# Copyright (C) 2014 Sami Keijonen
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tips and tricks 1.0.0\n"
+"Report-Msgid-Bugs-To: https://foxland.fi/contact/\n"
+"POT-Creation-Date: 2014-10-19 17:47:59+00:00\n"
+"PO-Revision-Date: 2014-10-19 22:38+0200\n"
+"Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
+"Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/admin-functions.php:34
+msgid "Show Tips"
+msgstr "Näytä ohjeet"
+
+#: admin/admin-functions.php:59 admin/admin-functions.php:169
+msgid "Close"
+msgstr "Sulje"
+
+#: admin/admin-functions.php:72 includes/post-types.php:90
+#: includes/post-types.php:92 includes/post-types.php:93
+#: includes/post-types.php:94 includes/post-types.php:105
+msgid "Tips"
+msgstr "Ohjeet"
+
+#: admin/admin-functions.php:114
+msgid "Table of Contents"
+msgstr "Sisällysluettelo"
+
+#: admin/admin-functions.php:155
+msgid "Helpful Tips"
+msgstr "Ohjeet ja vinkit"
+
+#: admin/admin-functions.php:156
+msgid "How to read tips?"
+msgstr "Miten ohjeita luetaan?"
+
+#: admin/admin-functions.php:157
+msgid "To read your help tip, simply click the link in table of contents."
+msgstr "Klikkaa sisällysluettelon linkkejä, jotta pääset lukemaan ohjeita."
+
+#: admin/admin-functions.php:158
+msgid "How to filter tips?"
+msgstr "Miten ohjeita suodatetaan?"
+
+#: admin/admin-functions.php:159
+msgid "I am working on it. Right now the category links do not work."
+msgstr ""
+"Kategoria-haku ei toimi vielä mutta koitetaan saada sekin toimimaan piakkoin."
+
+#: includes/post-types.php:91
+msgid "Tip"
+msgstr "Ohje"
+
+#: includes/post-types.php:95
+msgid "Add Tip"
+msgstr "Lisää ohje"
+
+#: includes/post-types.php:96
+msgid "Add New Tip"
+msgstr "Lisää uusi ohje"
+
+#: includes/post-types.php:97
+msgid "Edit Tip"
+msgstr "Muokkaa ohjetta"
+
+#: includes/post-types.php:98
+msgid "New Tip"
+msgstr "Uusi ohje"
+
+#: includes/post-types.php:99
+msgid "View Tip"
+msgstr "Näytä ohje"
+
+#: includes/post-types.php:100
+msgid "Search Tips"
+msgstr "Etsi ohjeita"
+
+#: includes/post-types.php:101
+msgid "No tips found"
+msgstr "Ohjeita ei löytynyt"
+
+#: includes/post-types.php:102
+msgid "No tips found in trash"
+msgstr "Roskakorista ei löytynyt ohjeita"
+
+#: includes/post-types.php:126
+msgid "Enter tip name"
+msgstr "Kirjoita ohjeen nimi"
+
+#: includes/post-types.php:142
+msgid "Tip updated. <a href=\"%s\">View tip</a>"
+msgstr "Ohje päivitetty. <a href=\"%s\">Näytä ohje</a>"
+
+#: includes/post-types.php:145
+msgid "Tip updated."
+msgstr "Ohje päivitetty."
+
+#: includes/post-types.php:146
+msgid "Tip restored to revision from %s"
+msgstr "Ohje palautettu versiosta %s"
+
+#: includes/post-types.php:147
+msgid "Tip published. <a href=\"%s\">View tip</a>"
+msgstr "Ohje julkaistu. <a href=\"%s\">Näytä ohje</a>"
+
+#: includes/post-types.php:148
+msgid "Tip saved."
+msgstr "Ohje tallennettu"
+
+#: includes/post-types.php:149
+msgid "Tip submitted. <a target=\"_blank\" href=\"%s\">Preview tip</a>"
+msgstr ""
+"Ohje lähetetty. <a target=\"_blank\" href=\"%s\">Esikatsele ohjetta</a>"
+
+#: includes/post-types.php:150
+msgid ""
+"Tip scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
+"\">Preview tip</a>"
+msgstr ""
+"Ohje ajastettu: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
+"\">Esikatsele ohjetta</a>"
+
+#: includes/post-types.php:150
+msgid "M j, Y @ G:i"
+msgstr "j.n.Y, G.i"
+
+#: includes/post-types.php:151
+msgid "Tip draft updated. <a target=\"_blank\" href=\"%s\">Preview tip</a>"
+msgstr ""
+"Ohjeen luonnos päivitetty. <a target=\"_blank\" href=\"%s\">Esikatsele "
+"ohjetta</a>"
+
+#: includes/taxonomies.php:54
+msgid "Tips and tricks Categories"
+msgstr "Ohjeiden kategoriat"
+
+#: includes/taxonomies.php:55
+msgid "Tips and tricks Category"
+msgstr "Ohjeiden kategoria"
+
+#: includes/taxonomies.php:56
+msgid "Categories"
+msgstr "Kategoriat"
+
+#: includes/taxonomies.php:57
+msgid "Category"
+msgstr "Kategoria"
+
+#: includes/taxonomies.php:58
+msgid "Search Categories"
+msgstr "Etsi kategorioita"
+
+#: includes/taxonomies.php:59
+msgid "Popular Categories"
+msgstr "Suositut kategoriat"
+
+#: includes/taxonomies.php:60
+msgid "All Categories"
+msgstr "Kaikki kategoriat"
+
+#: includes/taxonomies.php:61
+msgid "Edit Category"
+msgstr "Muokkaa kategoriaa"
+
+#: includes/taxonomies.php:62
+msgid "View Category"
+msgstr "Näytä kategoria"
+
+#: includes/taxonomies.php:63
+msgid "Update Category"
+msgstr "Päivitä kategoria"
+
+#: includes/taxonomies.php:64
+msgid "Add New Category"
+msgstr "Lisää uusi kategoria"
+
+#: includes/taxonomies.php:65
+msgid "New Category Name"
+msgstr "Uuden kategorian nimi"
+
+#: includes/taxonomies.php:66
+msgid "Parent Category"
+msgstr "Yläkategoria"
+
+#: includes/taxonomies.php:67
+msgid "Parent Category:"
+msgstr "Yläkategoria:"
+
+#: includes/taxonomies.php:108
+msgid "Tips and tricks Tags"
+msgstr "Ohjeiden avainsanat"
+
+#: includes/taxonomies.php:109
+msgid "Tips and tricks Tag"
+msgstr "Ohjeiden avainsana"
+
+#: includes/taxonomies.php:110
+msgid "Tags"
+msgstr "Avainsanat"
+
+#: includes/taxonomies.php:111
+msgid "Tag"
+msgstr "Avainsana"
+
+#: includes/taxonomies.php:112
+msgid "Search Tags"
+msgstr "Etsi avainsanoja"
+
+#: includes/taxonomies.php:113
+msgid "Popular Tags"
+msgstr "Suositut avainsanat"
+
+#: includes/taxonomies.php:114
+msgid "All Tags"
+msgstr "Kaikki avainsanat"
+
+#: includes/taxonomies.php:115
+msgid "Edit Tag"
+msgstr "Muokkaa avainsanaa"
+
+#: includes/taxonomies.php:116
+msgid "View Tag"
+msgstr "Näytä avainsana"
+
+#: includes/taxonomies.php:117
+msgid "Update Tag"
+msgstr "Päivitä avainsana"
+
+#: includes/taxonomies.php:118
+msgid "Add New Tag"
+msgstr "Lisää uusi avainsana"
+
+#: includes/taxonomies.php:119
+msgid "New Tag Name"
+msgstr "Uuden avainsanan nimi"
+
+#: includes/taxonomies.php:120
+msgid "Separate tags with commas"
+msgstr "Erota avainsanat pilkulla"
+
+#: includes/taxonomies.php:121
+msgid "Add or remove tags"
+msgstr "Lisää tai poista avainsanoja"
+
+#: includes/taxonomies.php:122
+msgid "Choose from the most used tags"
+msgstr "Valitse käytetyimmistä avainsanoista"
+
+#: includes/taxonomies.php:123
+msgid "No tags found"
+msgstr "Avainsanoja ei löytynyt"
+
+#. Plugin Name of the plugin/theme
+msgid "Tips and tricks"
+msgstr "Ohjeet ja vinkit"
+
+#. Plugin URI of the plugin/theme
+msgid "https://foxland.fi/downloads/tips-and-tricks"
+msgstr "https://foxland.fi/downloads/tips-and-tricks"
+
+#. Description of the plugin/theme
+msgid "Helpful tips and tricks for editors."
+msgstr "Ohjeita ja vinkkejä kirjoittajille."
+
+#. Author of the plugin/theme
+msgid "Sami Keijonen"
+msgstr "Sami Keijonen"
+
+#. Author URI of the plugin/theme
+msgid "https://foxland.fi"
+msgstr "https://foxland.fi"
+
+#: admin/admin-functions.php:135
+msgctxt "Arrow up"
+msgid "&uarr;"
+msgstr "&uarr;"

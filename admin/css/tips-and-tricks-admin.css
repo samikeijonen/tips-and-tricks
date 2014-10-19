@@ -1,0 +1,23 @@
+/**
+ * All of the CSS for your dashboard-specific functionality should be
+ * included in this file.
+ */
+ 
+.tips-and-tricks-content-area-wrapper {
+	font-size: 16px;
+	margin: 0 auto;
+	max-width: 800px;
+}
+.tips-and-tricks-content-area-wrapper h1 {
+	line-height: 1.2;
+}
+.tips-and-tricks-content-area-wrapper p {
+	font-size: 16px;
+}
+
+.tips-and-tricks-content-area-wrapper .tips-and-tricks-arrow-up {
+	font-size: 0.7em;
+	text-decoration: none;
+	position: relative;
+	bottom: 5px;
+}
