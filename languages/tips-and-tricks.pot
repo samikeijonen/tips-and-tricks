@@ -28,37 +28,37 @@ msgstr ""
 msgid "Show Tips"
 msgstr ""
 
-#: admin/admin-functions.php:59 admin/admin-functions.php:169
+#: admin/admin-functions.php:56 admin/admin-functions.php:166
 msgid "Close"
 msgstr ""
 
-#: admin/admin-functions.php:72 includes/post-types.php:90
+#: admin/admin-functions.php:69 includes/post-types.php:90
 #: includes/post-types.php:92 includes/post-types.php:93
 #: includes/post-types.php:94 includes/post-types.php:105
 msgid "Tips"
 msgstr ""
 
-#: admin/admin-functions.php:114
+#: admin/admin-functions.php:111
 msgid "Table of Contents"
 msgstr ""
 
-#: admin/admin-functions.php:155
+#: admin/admin-functions.php:152
 msgid "Helpful Tips"
 msgstr ""
 
-#: admin/admin-functions.php:156
+#: admin/admin-functions.php:153
 msgid "How to read tips?"
 msgstr ""
 
-#: admin/admin-functions.php:157
+#: admin/admin-functions.php:154
 msgid "To read your help tip, simply click the link in table of contents."
 msgstr ""
 
-#: admin/admin-functions.php:158
+#: admin/admin-functions.php:155
 msgid "How to filter tips?"
 msgstr ""
 
-#: admin/admin-functions.php:159
+#: admin/admin-functions.php:156
 msgid "I am working on it. Right now the category links do not work."
 msgstr ""
 
@@ -280,7 +280,7 @@ msgstr ""
 msgid "https://foxland.fi"
 msgstr ""
 
-#: admin/admin-functions.php:135
+#: admin/admin-functions.php:132
 msgctxt "Arrow up"
 msgid "&uarr;"
 msgstr ""
