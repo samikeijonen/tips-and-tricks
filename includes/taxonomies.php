@@ -92,7 +92,7 @@ function tips_and_tricks_register_taxonomies() {
 				'manage_terms' => 'manage_tip_and_trick',
 				'edit_terms'   => 'manage_tip_and_trick',
 				'delete_terms' => 'manage_tip_and_trick',
-				'assign_terms' => 'edit_tips_and_trick',
+				'assign_terms' => 'edit_tips_and_tricks',
 			),
 
 			/* The rewrite handles the URL structure. */

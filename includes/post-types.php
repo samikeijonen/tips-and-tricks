@@ -57,19 +57,19 @@ function tips_and_tricks_register_post_types() {
 			'create_posts'           => 'create_tips_and_trick',
 
 			// primitive caps used outside of map_meta_cap()
-			'edit_posts'             => 'edit_tips_and_trick',
-			'edit_others_posts'      => 'manage_tips_and_trick',
-			'publish_posts'          => 'edit_tips_and_trick',
+			'edit_posts'             => 'edit_tips_and_tricks',
+			'edit_others_posts'      => 'manage_tip_and_trick',
+			'publish_posts'          => 'manage_tip_and_trick',
 			'read_private_posts'     => 'read',
 
 			// primitive caps used inside of map_meta_cap()
 			'read'                   => 'read',
-			'delete_posts'           => 'manage_tips_and_trick',
-			'delete_private_posts'   => 'manage_tips_and_trick',
-			'delete_published_posts' => 'manage_tips_and_trick',
-			'delete_others_posts'    => 'manage_tips_and_trick',
-			'edit_private_posts'     => 'edit_tips_and_trick',
-			'edit_published_posts'   => 'edit_tips_and_trick'
+			'delete_posts'           => 'manage_tip_and_trick',
+			'delete_private_posts'   => 'manage_tip_and_trick',
+			'delete_published_posts' => 'manage_tip_and_trick',
+			'delete_others_posts'    => 'manage_tip_and_trick',
+			'edit_private_posts'     => 'edit_tips_and_tricks',
+			'edit_published_posts'   => 'edit_tips_and_tricks'
 		),
 
 		'rewrite' => array(
