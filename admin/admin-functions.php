@@ -32,11 +32,8 @@ function tips_and_tricks_media_buttons( $editor_id ) {
 	if ( is_object( $post ) && !empty( $post->post_type ) && 'tip_and_trick' !== $post->post_type ) {
 		//echo '<a href="#TB_inline?width=480&amp;height=530&amp;inlineId=tips-and-tricks-popup" class="button-secondary thickbox" data-editor="' . esc_attr( $editor_id ) . '" title="' . esc_attr__( 'Show Tips', 'tips-and-tricks' ) . '">' . __( 'Show Tips', 'tips-and-tricks' ) . '</a>';
 		echo '<a id="tips-and-tricks-media-modal-button" href="#" class="button tips-and-tricks-show-tip" data-editor="' . esc_attr( $editor_id ) . '" title="' . esc_attr__( 'Show Tips', 'tips-and-tricks' ) . '">' . __( 'Show Tips', 'tips-and-tricks' ) . '</a>';
-		//$tips_and_tricks_get_button = sprintf( '<a href="#tips-and-tricks-popup" class="button aesop-add-story-component" title="%s"><span class="aesop-admin-button-icon dashicons dashicons-plus"></span> %s</a>', __( 'Show Tips', 'tips-and-tricks' ), __( 'Show Tips', 'tips-and-tricks' ) );
-
-		//$tips_and_tricks_button = apply_filters( 'tips_and_tricks_generator_button', $tips_and_tricks_get_button );
-
-		//echo $tips_and_tricks_button;
+		
+		// @TODO: Is dashicon helpful before text Show Tips?
 	
 	}
 
@@ -44,7 +41,7 @@ function tips_and_tricks_media_buttons( $editor_id ) {
 add_action( 'media_buttons', 'tips_and_tricks_media_buttons', 11 );
 
 /**
- * Shortcode config popup when the "Add Whistles" media button is clicked.
+ * Media modal popup when the 'Show Tips' media button is clicked.
  *
  * @since  0.1.0
  * @access public
