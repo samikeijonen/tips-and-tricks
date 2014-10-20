@@ -32,6 +32,11 @@
             $('.tips-and-tricks-default-ui .selected').removeClass('details selected');
             $('.tips-and-tricks-default-ui').appendTo('.tips-and-tricks-default-ui-wrapper').hide();
             tips_and_tricks_trigger_target = tips_and_tricks_editor_frame = false;
+			/* display welcome on close: not sure. */
+			$( '#tips-and-tricks-welcome' ).show();
+			$( '#tips-and-tricks-welcome' ).siblings('.tips-and-tricks-section').hide();
+			/* remove active tab */
+			$( '#tips-and-tricks-terms a' ).removeClass('active');
         };
 
         $(document).on('click', '.tips-and-tricks-show-tip, .tips-and-tricks-modal-trigger', function(e){
@@ -51,6 +56,49 @@
                     tips_and_tricks_append_and_hide(e);
                 }
             });
+        });
+		/**
+		 * This to create the tabs
+		 * maybe need fixing, just a quick cowboy coding
+		 */
+        $(document).on('click', '#tips-and-tricks-terms a', function(e){
+			e.preventDefault();
+			/* make tab */
+			$(this).addClass('active');
+			$(this).siblings("a").removeClass('active');
+
+			/* grab the target id */
+			var target_div = $(this).attr("href");
+
+			/* Only if it's not loaded yet. */
+			if ( ! $(target_div).hasClass('loaded') ) {
+
+				/* Loading status. */
+				$( '#tips-and-tricks-loading' ).show();
+
+				$.ajax( {
+					type: "POST",
+					url: tips_and_tricks_ajax_data.ajaxurl, // From localized script.
+					data:
+					{
+						action                      : 'tips_and_tricks_click_term_link',                    // Inject data to hook "wp_ajax_*" => "wp_ajax_tips_and_tricks_click_term_link" (hook).
+						tips_and_tricks_ajax_nonce  : tips_and_tricks_ajax_data.tips_and_tricks_ajax_nonce, // From localize script.
+						tips_and_tricks_ajax_termid : $(this).data('tip-id'),                               // From data-termid in add module link.
+					},
+					success: function( data ){
+						$( target_div ).html( data ); // Add the data on success.
+						$( target_div ).addClass( 'loaded' );
+						$( '#tips-and-tricks-loading' ).hide();
+					}
+				} );
+
+			} //end if
+
+			/* Display it. */
+			$(target_div).show();
+			/* Hide others. */
+			$(target_div).siblings( '.tips-and-tricks-section' ).hide();
+
         });
     });
 }(jQuery));
