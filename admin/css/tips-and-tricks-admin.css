@@ -19,5 +19,42 @@
 	font-size: 0.7em;
 	text-decoration: none;
 	position: relative;
-	bottom: 5px;
+	bottom: 3px;
+}
+
+/* Show Tips icon. */
+.tips-and-tricks-admin-button-icon.dashicons-before,
+.tips-and-tricks-admin-button-icon.dashicons-before:before {
+	width: 18px;
+	height: 18px;
+	vertical-align: text-bottom;
+}
+.tips-and-tricks-admin-button-icon.dashicons-before {
+	margin: 0 2px 0 0;
+}
+.tips-and-tricks-admin-button-icon.dashicons-before:before {
+	font-size: 18px;
+	color: #888;
+}
+
+
+/* Loading ajax... */
+#tips-and-tricks-loading {
+	position: absolute;
+	display: none;
+	top: 20px;
+	left: 20px;
+}
+
+/* Hide all sections. */
+.tips-and-tricks-section {
+	display: none;
+}
+#tips-and-tricks-welcome {
+	display: block;
+}
+
+/* Media sidebar. */
+.tips-and-tricks-meta-sidebar p {
+	margin: 0 0 1.5em;
 }
