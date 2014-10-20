@@ -24,42 +24,58 @@ msgstr ""
 "x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
 "X-Textdomain-Support: yes\n"
 
-#: admin/admin-functions.php:34
+#: admin/admin-ajax-functions.php:61
+msgid "Table of Contents"
+msgstr ""
+
+#: admin/admin-functions.php:33
 msgid "Show Tips"
 msgstr ""
 
-#: admin/admin-functions.php:56 admin/admin-functions.php:166
+#: admin/admin-functions.php:60 admin/admin-functions.php:129
 msgid "Close"
 msgstr ""
 
-#: admin/admin-functions.php:69 includes/post-types.php:90
+#: admin/admin-functions.php:72 includes/post-types.php:90
 #: includes/post-types.php:92 includes/post-types.php:93
 #: includes/post-types.php:94 includes/post-types.php:105
 msgid "Tips"
 msgstr ""
 
-#: admin/admin-functions.php:111
-msgid "Table of Contents"
+#: admin/admin-functions.php:95
+msgid "How to use tips?"
 msgstr ""
 
-#: admin/admin-functions.php:152
+#: admin/admin-functions.php:97
+msgid "Select a category from above to view tips."
+msgstr ""
+
+#: admin/admin-functions.php:98
+msgid "Click the tip title."
+msgstr ""
+
+#: admin/admin-functions.php:99
+msgid "Click arrow up next the title to get back table of contents."
+msgstr ""
+
+#: admin/admin-functions.php:115
 msgid "Helpful Tips"
 msgstr ""
 
-#: admin/admin-functions.php:153
+#: admin/admin-functions.php:116
 msgid "How to read tips?"
 msgstr ""
 
-#: admin/admin-functions.php:154
+#: admin/admin-functions.php:117
 msgid "To read your help tip, simply click the link in table of contents."
 msgstr ""
 
-#: admin/admin-functions.php:155
+#: admin/admin-functions.php:118
 msgid "How to filter tips?"
 msgstr ""
 
-#: admin/admin-functions.php:156
-msgid "I am working on it. Right now the category links do not work."
+#: admin/admin-functions.php:119
+msgid "Click the category links to see tips from that category."
 msgstr ""
 
 #: includes/post-types.php:91
@@ -269,7 +285,7 @@ msgid "https://foxland.fi/downloads/tips-and-tricks"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Helpful tips and tricks for editors."
+msgid "Helpful tips and tricks for editors in media modal window."
 msgstr ""
 
 #. Author of the plugin/theme
@@ -280,7 +296,7 @@ msgstr ""
 msgid "https://foxland.fi"
 msgstr ""
 
-#: admin/admin-functions.php:132
+#: admin/admin-ajax-functions.php:75
 msgctxt "Arrow up"
 msgid "&uarr;"
 msgstr ""
