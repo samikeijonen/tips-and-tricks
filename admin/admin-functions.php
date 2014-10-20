@@ -144,19 +144,3 @@ function tips_and_tricks_popup_content() {
 }
 add_action( 'admin_footer-post-new.php', 'tips_and_tricks_popup_content' );
 add_action( 'admin_footer-post.php',     'tips_and_tricks_popup_content' );
-
-/**
- * Get post slug.
- *
- * @since  1.0.0
- * @access public
- * @return void
- */
-function tips_and_trick_get_post_slug() {
-	
-	$tips_and_tricks_post = get_post( get_the_ID() ); 
-	$tips_and_tricks_post_slug = $tips_and_tricks_post->post_name;
-	
-	return $tips_and_tricks_post_slug;
-
-}
