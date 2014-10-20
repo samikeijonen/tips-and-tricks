@@ -6,7 +6,7 @@
  * @since      1.0.0
  *
  * @package    Tips_And_Tricks
- * @subpackage Includes
+ * @subpackage Admin
  * @since      1.0.0
  * @author     Sami Keijonen <sami.keijonen@foxnet.fi>
  * @copyright  Copyright (c) 2014, Sami Keijonen
@@ -30,25 +30,29 @@ function tips_and_tricks_media_buttons( $editor_id ) {
 	global $post;
 
 	if ( is_object( $post ) && !empty( $post->post_type ) && 'tip_and_trick' !== $post->post_type ) {
-		//echo '<a href="#TB_inline?width=480&amp;height=530&amp;inlineId=tips-and-tricks-popup" class="button-secondary thickbox" data-editor="' . esc_attr( $editor_id ) . '" title="' . esc_attr__( 'Show Tips', 'tips-and-tricks' ) . '">' . __( 'Show Tips', 'tips-and-tricks' ) . '</a>';
-		echo '<a id="tips-and-tricks-media-modal-button" href="#" class="button tips-and-tricks-show-tip" data-editor="' . esc_attr( $editor_id ) . '" title="' . esc_attr__( 'Show Tips', 'tips-and-tricks' ) . '">' . __( 'Show Tips', 'tips-and-tricks' ) . '</a>';
-		
-		// @TODO: Is dashicon helpful before text Show Tips?
-	
+		echo '<a id="tips-and-tricks-media-modal-button" href="#" class="button tips-and-tricks-show-tip" data-editor="' . esc_attr( $editor_id ) . '" title="' . esc_attr__( 'Show Tips', 'tips-and-tricks' ) . '"><span class="tips-and-tricks-admin-button-icon dashicons-before dashicons-welcome-write-blog"></span>' . __( 'Show Tips', 'tips-and-tricks' ) . '</a>';
 	}
 
 }
 add_action( 'media_buttons', 'tips_and_tricks_media_buttons', 11 );
 
 /**
- * Media modal popup when the 'Show Tips' media button is clicked.
+ * Config popup media modal window when the "Show Tips" media button is clicked.
  *
- * @since  0.1.0
+ * @since  1.0.0
  * @access public
  * @return void
  */
 function tips_and_tricks_popup_content() {
 
+	/* Term data from 'tip_and_trick_category'. */
+	$tips_and_tricks_term_data = array();
+	$terms = get_terms( 'tip_and_trick_category' );
+	if ( !empty( $terms ) && !is_wp_error( $terms ) ) {
+		foreach ( $terms as $term ) {
+			$tips_and_tricks_term_data[ $term->term_id ] = $term->name;
+		}
+	}
 	?>
 	<div id="tips-and-tricks-default-ui-wrapper" class="tips-and-tricks-default-ui-wrapper" style="display: none;">
 		<div class="tips-and-tricks-default-ui tips-and-tricks-image-meta">
@@ -56,9 +60,8 @@ function tips_and_tricks_popup_content() {
 				<a class="media-modal-close" href="#"><span class="media-modal-icon"><span class="screen-reader-text"><?php _e( 'Close', 'tips-and-trick' ); ?></span></span></a>
 					<div class="media-modal-content">
 						<div class="media-frame wp-core-ui tips-and-tricks-meta-wrap">
-							
 							<div class="media-frame-menu">
-								<div class="media-menu">
+								<div id="tips-and-tricks-category" class="media-menu">
 									<a href="#" class="media-menu-item">Yyyy</a>
 									<a href="#" class="media-menu-item">Yyyy</a>
 									<a href="#" class="media-menu-item">Yyyy</a>
@@ -66,100 +69,60 @@ function tips_and_tricks_popup_content() {
 							</div>
 							
 							<div class="media-frame-title">
-                                <h1><?php _e( 'Tips', 'tips-and-tricks' ); ?></h1>
-                            </div>
-							
+								<h1><?php _e( 'Tips', 'tips-and-tricks' ); ?></h1>
+							</div>
+
+							<?php /* Term links (tabs). */ ?>
 							<div class="media-frame-router">
-								<div class="media-router">
+								<div id="tips-and-tricks-terms" class="media-router">
 								<?php
-								/* Get 'tip_and_trick_category' terms and echo them. */
-								$terms = get_terms( 'tip_and_trick_category' );
-								if ( !empty( $terms ) && !is_wp_error( $terms ) ){
-									foreach ( $terms as $term ) {
-										echo '<a href="#" class="media-menu-item">' . $term->name . '</a>';
-									}
+								foreach ( $tips_and_tricks_term_data as $term_id => $term_name ) {
+									echo '<a href="#tips-and-tricks-term-' . $term_id . '" data-tip-id="' . $term_id . '" class="media-menu-item">' . $term_name . '</a>';
 								}
 								?>
 								</div>
 							</div>
-							
+
 							<div class="media-frame-content">
 								<div class="attachments-browser">
+									<span class="spinner" id="tips-and-tricks-loading"></span>
 								
 									<div class="tips-and-tricks-content-area attachments">
 										<div class="tips-and-tricks-content-area-wrapper">
-                        			
+
+											<?php /* Welcome message/default content. */ ?>
+											<div id="tips-and-tricks-welcome" class="tips-and-tricks-section">
+												<h1><?php _e( 'How to use tips?', 'tips-and-tricks' ); ?></h1>
+												<ol class="tips-and-tricks-welcome-list">
+													<li><?php _e( 'Select a category from above to view tips.', 'tips-and-tricks' ); ?></li>
+													<li><?php _e( 'Click the tip title.', 'tips-and-tricks' ); ?></li>
+													<li><?php _e( 'Click arrow up next the title to get back table of contents.', 'tips-and-tricks' ); ?></li>
+												</ol>
+											</div>
+										
+											<?php /* Create empty div as placeholder for each category. */ ?>
 											<?php
-											/* Get tip_and_trick posts. */
-											$tips_and_tricks_popup_args = apply_filters( 'tips_and_tricks_popup_arguments', array(
-												'post_type'      => array( 'tip_and_trick' ),
-												'post_status'    => 'publish',
-												'orderby'       => 'menu_order title date',
-												'order'          => 'ASC',
-												'posts_per_page' => -1
-											) );
-											
-											/* Set transient (24h) for faster loading. Delete transient on hook 'save_post'. */
-											if( false === ( $tips_and_tricks_popup_query = get_transient( 'tips_and_tricks_popup_query' ) ) ) {
-												$tips_and_tricks_popup_query = new WP_Query( $tips_and_tricks_popup_args );
-												set_transient( 'tips_and_tricks_popup_query', $tips_and_tricks_popup_query, 60*60*24 );
+											foreach ( $tips_and_tricks_term_data as $term_id => $term_name ) {
+												echo '<div id="tips-and-tricks-term-' . $term_id . '" class="tips-and-tricks-section"></div>';
 											}
-			
-											if ( $tips_and_tricks_popup_query->have_posts() ) :
-				
-												/* Get all the titles as table of contents and link them in posts. */
-												echo '<h1 class="entry-title">' . __( 'Table of Contents', 'tips-and-tricks' ) . '</h1>';
-												echo '<ul id="tips-and-tricks-table-of-contents" class="tips-and-tricks-table-of-contents">';
-													while ( $tips_and_tricks_popup_query->have_posts() ) : $tips_and_tricks_popup_query->the_post(); 
-						
-														/* Get post slug. */
-														$tips_and_tricks_post_slug = tips_and_trick_get_post_slug();
-						
-														the_title( '<li><a href="#' . esc_attr( $tips_and_tricks_post_slug ) . '" class="entry-title-link">', '</a></li>' );
-						
-													endwhile;
-												echo '</ul>';
-
-												while ( $tips_and_tricks_popup_query->have_posts() ) : $tips_and_tricks_popup_query->the_post(); 
-					
-													/* Get post slug. */
-													$tips_and_tricks_post_slug = tips_and_trick_get_post_slug();
-													?>
-
-													<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
-														<header class="entry-header">
-															<?php the_title( '<h1 class="entry-title" id="' . esc_attr( $tips_and_tricks_post_slug ) . '">', ' <a href="#tips-and-tricks-table-of-contents" class="tips-and-tricks-arrow-up">' . _x( '&uarr;', 'Arrow up', 'tips-and-tricks' ) . '</a></h1>' ); ?>
-														</header><!-- .entry-header -->
-
-														<div class="entry-content">
-															<?php the_content(); ?>
-														</div><!-- .entry-content -->
-
-													</article><!-- #post-## -->
-
-												<?php endwhile; // End while loop. ?>
-
-											<?php endif; // End check for posts. ?>
-			
-											<?php wp_reset_postdata(); // reset query. ?>
-				
+											?>
+										
 										</div><!-- .tips-and-tricks-content-area-wrapper -->
 									</div><!-- .attachments -->
-									
+
 									<div class="media-sidebar">
 										<div class="tips-and-tricks-meta-sidebar">
-											<h3 style="margin: 1.4em 0 1em;"><?php _e( 'Helpful Tips', 'tips-and-tricks' ); ?></h3>
+											<h3><?php _e( 'Helpful Tips', 'tips-and-tricks' ); ?></h3>
 											<strong><?php _e( 'How to read tips?', 'tips-and-tricks' ); ?></strong>
-											<p style="margin: 0 0 1.5em;"><?php _e( 'To read your help tip, simply click the link in table of contents.', 'tips-and-tricks' ); ?></p>
+											<p><?php _e( 'To read your help tip, simply click the link in table of contents.', 'tips-and-tricks' ); ?></p>
 											<strong><?php _e( 'How to filter tips?', 'tips-and-tricks' ); ?></strong>
-											<p style="margin: 0 0 1.5em;"><?php _e( 'I am working on it. Right now the category links do not work.', 'tips-and-tricks' ); ?></p>
+											<p><?php _e( 'Click the category links to see tips from that category.', 'tips-and-tricks' ); ?></p>
 										</div><!-- .tips-and-tricks-meta-sidebar -->
 									</div><!-- .media-sidebar -->
-									
+
 								</div><!-- .attachments-browser -->
 							</div><!-- .media-frame-content -->
-							
+
 							<div class="media-frame-toolbar">
 								<div class="media-toolbar">
 									<div class="media-toolbar-secondary">
@@ -167,7 +130,7 @@ function tips_and_tricks_popup_content() {
 									</div><!-- .media-toolbar-secondary -->
 								</div><!-- .media-toolbar -->
 							</div><!-- .media-frame-toolbar -->
-							
+
 						</div><!-- .media-frame -->
 					</div><!-- .media-modal-content -->
 				</div><!-- .media-modal -->
@@ -197,15 +160,3 @@ function tips_and_trick_get_post_slug() {
 	return $tips_and_tricks_post_slug;
 
 }
-
-/**
- * Flush out the transients used in WP Queries.
- *
- * @since  1.0.0
- * @access public
- * @return void
- */
-function tips_and_tricks_transient_flusher() {
-	delete_transient( 'tips_and_tricks_popup_query' );
-}
-add_action( 'save_post', 'tips_and_tricks_transient_flusher' );
