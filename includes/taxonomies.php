@@ -35,10 +35,10 @@ function tips_and_tricks_register_taxonomies() {
 
 			/* Capabilities. */
 			'capabilities' => array(
-				'manage_terms' => 'manage_tip_and_trick',
-				'edit_terms'   => 'manage_tip_and_trick',
-				'delete_terms' => 'manage_tip_and_trick',
-				'assign_terms' => 'edit_tips_and_trick',
+				'manage_terms' => 'manage_tips_and_tricks',
+				'edit_terms'   => 'manage_tips_and_tricks',
+				'delete_terms' => 'manage_tips_and_tricks',
+				'assign_terms' => 'edit_tips_and_tricks',
 			),
 
 			/* The rewrite handles the URL structure. */
@@ -89,9 +89,9 @@ function tips_and_tricks_register_taxonomies() {
 
 			/* Capabilities. */
 			'capabilities' => array(
-				'manage_terms' => 'manage_tip_and_trick',
-				'edit_terms'   => 'manage_tip_and_trick',
-				'delete_terms' => 'manage_tip_and_trick',
+				'manage_terms' => 'manage_tips_and_tricks',
+				'edit_terms'   => 'manage_tips_and_tricks',
+				'delete_terms' => 'manage_tips_and_tricks',
 				'assign_terms' => 'edit_tips_and_tricks',
 			),
 
