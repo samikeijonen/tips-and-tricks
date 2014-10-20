@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Tips and tricks
  * Plugin URI:        https://foxland.fi/downloads/tips-and-tricks
- * Description:       Helpful tips and tricks for editors.
+ * Description:       Helpful tips and tricks for editors in media modal window.
  * Version:           1.0.0
  * Author:            Sami Keijonen
  * Author URI:        https://foxland.fi
@@ -34,7 +34,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 /**
- * Sets up and initializes the Message Board plugin.
+ * Sets up and initializes the Tips and Tricks plugin.
  *
  * @since  1.0.0
  * @access public
@@ -79,12 +79,14 @@ final class Tips_And_Tricks {
 	}
 
 	private function includes() {
-
+		
+		/* Load functions for the plugin. */
 		require_once( $this->dir_path . 'includes/post-types.php' );
 		require_once( $this->dir_path . 'includes/taxonomies.php' );
-
-
+		
+		/* Load admin functions including Ajax calls. */
 		if ( is_admin() ) {
+			require_once( $this->dir_path . 'admin/admin-ajax-functions.php' );
 			require_once( $this->dir_path . 'admin/admin-functions.php' );
 		}
 		
@@ -97,6 +99,9 @@ final class Tips_And_Tricks {
 		
 		/* Enqueue admin scripts and styles. */
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );
+		
+		/* Register activation hook. */
+		register_activation_hook( __FILE__, array( $this, 'activation' ) );
 
 	}
 
@@ -112,11 +117,12 @@ final class Tips_And_Tricks {
 	}
 	
 	/**
-	* Load scripts for the setting page.
-	*
-	* @since  1.0.0
-	* @return void
-	*/
+	 * Load scripts for the admin.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return void
+	 */
 	public function enqueue_admin_scripts( $hook ) {
 	
 		/* Return if we are not on 'post.php' or 'post-new.php'. */
@@ -129,10 +135,38 @@ final class Tips_And_Tricks {
 	
 		/* Load admin js. */
 		wp_enqueue_script( 'tips-and-tricks-admin-js', plugin_dir_url(__FILE__) . 'admin/js/tips-and-tricks-admin' . $suffix . '.js', array(), $this->version );
+		
+		/* Send data to Ajax loading. */
+		wp_localize_script( 'tips-and-tricks-admin-js', 'tips_and_tricks_ajax_data', array(
+			'ajaxurl'                    => admin_url( 'admin-ajax.php' ),
+			'tips_and_tricks_ajax_nonce' => wp_create_nonce( 'tips_and_tricks_ajax_nonce' )
+		) );
 	
 		/* Load admin styles. */
 		wp_enqueue_style( 'tips-and-tricks-admin-styles', plugin_dir_url(__FILE__) . 'admin/css/tips-and-tricks-admin' . $suffix . '.css', array(), $this->version );
 	
+	}
+	
+	/**
+	 * Method that runs only when the plugin is activated.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function activation() {
+
+		/* Get the administrator role. */
+		$role = get_role( 'administrator' );
+
+		/* If the administrator role exists, add required capabilities for the plugin. */
+		if ( !empty( $role ) ) {
+
+			$role->add_cap( 'manage_tips_and_tricks' );
+			$role->add_cap( 'create_tips_and_tricks' );
+			$role->add_cap( 'edit_tips_and_tricks'   );
+			
+		}
 	}
 	
 }
