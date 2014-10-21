@@ -30,7 +30,7 @@ function tips_and_tricks_media_buttons( $editor_id ) {
 	global $post;
 
 	if ( is_object( $post ) && !empty( $post->post_type ) && 'tip_and_trick' !== $post->post_type ) {
-		echo '<a id="tips-and-tricks-media-modal-button" href="#" class="button tips-and-tricks-show-tip" data-editor="' . esc_attr( $editor_id ) . '" title="' . esc_attr__( 'Show Tips', 'tips-and-tricks' ) . '"><span class="tips-and-tricks-admin-button-icon dashicons-before dashicons-welcome-write-blog"></span>' . __( 'Show Tips', 'tips-and-tricks' ) . '</a>';
+		echo '<a id="tips-and-tricks-media-modal-button" href="#" class="button tips-and-tricks-show-tip" data-editor="' . esc_attr( $editor_id ) . '" title="' . esc_attr__( 'Show Tips', 'tips-and-tricks' ) . '"><span class="tips-and-tricks-admin-button-icon wp-media-buttons-icon dashicons-before dashicons-welcome-write-blog"></span>' . __( 'Show Tips', 'tips-and-tricks' ) . '</a>';
 	}
 
 }
