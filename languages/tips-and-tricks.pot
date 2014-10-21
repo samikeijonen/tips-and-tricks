@@ -32,49 +32,49 @@ msgstr ""
 msgid "Show Tips"
 msgstr ""
 
-#: admin/admin-functions.php:60 admin/admin-functions.php:129
+#: admin/admin-functions.php:60 admin/admin-functions.php:126
 msgid "Close"
 msgstr ""
 
-#: admin/admin-functions.php:72 includes/post-types.php:90
+#: admin/admin-functions.php:69 includes/post-types.php:90
 #: includes/post-types.php:92 includes/post-types.php:93
 #: includes/post-types.php:94 includes/post-types.php:105
 msgid "Tips"
 msgstr ""
 
-#: admin/admin-functions.php:95
+#: admin/admin-functions.php:92
 msgid "How to use tips?"
 msgstr ""
 
-#: admin/admin-functions.php:97
+#: admin/admin-functions.php:94
 msgid "Select a category from above to view tips."
 msgstr ""
 
-#: admin/admin-functions.php:98
+#: admin/admin-functions.php:95
 msgid "Click the tip title."
 msgstr ""
 
-#: admin/admin-functions.php:99
+#: admin/admin-functions.php:96
 msgid "Click arrow up next the title to get back table of contents."
 msgstr ""
 
-#: admin/admin-functions.php:115
+#: admin/admin-functions.php:112
 msgid "Helpful Tips"
 msgstr ""
 
-#: admin/admin-functions.php:116
+#: admin/admin-functions.php:113
 msgid "How to read tips?"
 msgstr ""
 
-#: admin/admin-functions.php:117
+#: admin/admin-functions.php:114
 msgid "To read your help tip, simply click the link in table of contents."
 msgstr ""
 
-#: admin/admin-functions.php:118
+#: admin/admin-functions.php:115
 msgid "How to filter tips?"
 msgstr ""
 
-#: admin/admin-functions.php:119
+#: admin/admin-functions.php:116
 msgid "Click the category links to see tips from that category."
 msgstr ""
 

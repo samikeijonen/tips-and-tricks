@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Tips and tricks 1.0.0\n"
 "Report-Msgid-Bugs-To: https://foxland.fi/contact/\n"
 "POT-Creation-Date: 2014-10-19 17:47:59+00:00\n"
-"PO-Revision-Date: 2014-10-20 22:33+0200\n"
+"PO-Revision-Date: 2014-10-21 20:00+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -29,51 +29,51 @@ msgstr "Sisällysluettelo"
 msgid "Show Tips"
 msgstr "Näytä ohjeet"
 
-#: admin/admin-functions.php:60 admin/admin-functions.php:129
+#: admin/admin-functions.php:60 admin/admin-functions.php:126
 msgid "Close"
 msgstr "Sulje"
 
-#: admin/admin-functions.php:72 includes/post-types.php:90
+#: admin/admin-functions.php:69 includes/post-types.php:90
 #: includes/post-types.php:92 includes/post-types.php:93
 #: includes/post-types.php:94 includes/post-types.php:105
 msgid "Tips"
 msgstr "Ohjeet"
 
-#: admin/admin-functions.php:95
+#: admin/admin-functions.php:92
 msgid "How to use tips?"
 msgstr "Miten ohjeita luetaan?"
 
-#: admin/admin-functions.php:97
+#: admin/admin-functions.php:94
 msgid "Select a category from above to view tips."
 msgstr "Valitse ohjeiden kategoria yläpuolelta."
 
-#: admin/admin-functions.php:98
+#: admin/admin-functions.php:95
 msgid "Click the tip title."
 msgstr "Klikkaa ohjeen otsikkoa."
 
-#: admin/admin-functions.php:99
+#: admin/admin-functions.php:96
 msgid "Click arrow up next the title to get back table of contents."
 msgstr ""
 "Klikkaa otsikon vieressä olevaa nuolta palataksesi takaisin "
 "sisällysluetteloon."
 
-#: admin/admin-functions.php:115
+#: admin/admin-functions.php:112
 msgid "Helpful Tips"
 msgstr "Ohjeet ja vinkit"
 
-#: admin/admin-functions.php:116
+#: admin/admin-functions.php:113
 msgid "How to read tips?"
 msgstr "Miten ohjeita luetaan?"
 
-#: admin/admin-functions.php:117
+#: admin/admin-functions.php:114
 msgid "To read your help tip, simply click the link in table of contents."
 msgstr "Klikkaa sisällysluettelon linkkejä, jotta pääset lukemaan ohjeita."
 
-#: admin/admin-functions.php:118
+#: admin/admin-functions.php:115
 msgid "How to filter tips?"
 msgstr "Miten ohjeita suodatetaan?"
 
-#: admin/admin-functions.php:119
+#: admin/admin-functions.php:116
 msgid "Click the category links to see tips from that category."
 msgstr ""
 "Klikkaa ohjeiden kategoria-linkkejä nähdäksesi siihen liittyvät ohjeet."
