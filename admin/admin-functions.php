@@ -62,9 +62,6 @@ function tips_and_tricks_popup_content() {
 						<div class="media-frame wp-core-ui tips-and-tricks-meta-wrap">
 							<div class="media-frame-menu">
 								<div id="tips-and-tricks-category" class="media-menu">
-									<a href="#" class="media-menu-item">Yyyy</a>
-									<a href="#" class="media-menu-item">Yyyy</a>
-									<a href="#" class="media-menu-item">Yyyy</a>
 								</div>
 							</div>
 							
