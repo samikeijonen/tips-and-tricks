@@ -57,17 +57,19 @@
                 }
             });
         });
+		
 		/**
 		 * This to create the tabs
 		 * maybe need fixing, just a quick cowboy coding
 		 */
         $(document).on('click', '#tips-and-tricks-terms a', function(e){
 			e.preventDefault();
-			/* make tab */
+			
+			/* Activate when clicking. */
 			$(this).addClass('active');
 			$(this).siblings("a").removeClass('active');
 
-			/* grab the target id */
+			/* Grab the target id. */
 			var target_div = $(this).attr("href");
 
 			/* Only if it's not loaded yet. */
