@@ -11,7 +11,7 @@ I was thinking can I show tips in the media modal window. This plugin is here to
 
 The plugin elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
-2014 &copy; [Sami Keijonen](https://foxland.fi).
+2014 &copy; [Sami Keijonen](https://foxland.fi) and [David Chandra](http://shellcreeper.com/).
 
 ## Changelog
 
