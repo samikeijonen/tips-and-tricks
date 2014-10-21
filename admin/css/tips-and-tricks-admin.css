@@ -23,20 +23,20 @@
 }
 
 /* Show Tips icon. */
-.tips-and-tricks-admin-button-icon.dashicons-before,
-.tips-and-tricks-admin-button-icon.dashicons-before:before {
+.tips-and-tricks-admin-button-icon.dashicons-before {
 	width: 18px;
 	height: 18px;
-	vertical-align: text-bottom;
-}
-.tips-and-tricks-admin-button-icon.dashicons-before {
 	margin: 0 2px 0 0;
+	vertical-align: text-top;
 }
 .tips-and-tricks-admin-button-icon.dashicons-before:before {
 	font-size: 18px;
+	line-height: 1;
 	color: #888;
 }
-
+.wp-media-buttons .button.tips-and-tricks-show-tip {
+	padding-left: 2px;
+}
 
 /* Loading ajax... */
 #tips-and-tricks-loading {
